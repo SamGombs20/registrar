@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+    <p>All <span>*</span> are required.</p>
+    <form id="registration_form">
+        <table>
+            <tr>
+                <td>Full Name:<span>*</span></td>
+                <td><input type="text" id="full_name" required minlength="6"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email"  id="email"></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input type="text" id="address"></td>
+            </tr>
+            <tr>
+                <td>Username: <span>*</span></td>
+                <td><input type="text" id="user_name" required></td>
+            </tr>
+            <tr>
+                <td>Password: <span>*</span></td>
+                <td><input type="password" id="password" required></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="show_password">
+                    Show password
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <fieldset>
+                        <legend>Select your title</legend>
+                        <label>
+                            <input type="radio" name="title" value="Mr."> Mr.
+                        </label>
+                        <label>
+                            <input type="radio" name="title" value="Mrs" required> Mrs.
+                        </label>
+                        <label>
+                            <input type="radio" name="title" value="Miss"> Miss
+                        </label>
+                    </fieldset>
+                </td>
+            </tr>
+            <tr>
+                <td>Occupation: <span>*</span></td>
+                <td><input type="text" id="occupation" required></td>
+            </tr>
+            <tr>
+                <td>Sector:</td>
+                <td><input type="text" id="sector"></td>
+            </tr>
+        </table>
+        <dialog id="businesses_dialog">
+            <p>Check the businesses you want to be registered to..</p>
+            <fieldset>
+                <legend>Available Businesses</legend>
+                <form id="businesses_form">
+                    <div id="checkbox"></div>
+                    <input type="text" placeholder="Add a business" id="input_business">
+                    <p id="business_form_error"></p>
+                    <div id="buttons">
+                        <input type="button" value="Add Business" id="add_business">
+                        <input type="submit" value="Proceed">
+                    </div>
+                </form>
+                
+            </fieldset>
+        </dialog>
+        
+        <input type="submit" value="Register me" id="register_user">
+    </form>
+</body>
+</html>
